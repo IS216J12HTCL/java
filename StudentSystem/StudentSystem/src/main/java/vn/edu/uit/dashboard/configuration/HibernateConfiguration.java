@@ -64,7 +64,7 @@ public class HibernateConfiguration {
     	dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 
 
-       dataSource.setUrl("jdbc:mysql://localhost:3306/student_system?characterEncoding=UTF-8");
+       dataSource.setUrl("jdbc:mysql://localhost:3306/qlhs?characterEncoding=UTF-8");
         dataSource.setUsername("root");
        dataSource.setPassword("root");
        return dataSource;
