@@ -1,0 +1,84 @@
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+
+<tiles-definitions>  
+ 
+   <!-- Base Definition -->
+   <definition name="base-definition" 
+       template="/WEB-INF/views/tiles/layouts/blankLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="" />  
+       <put-attribute name="menu" value="" />  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="" />  
+   </definition>  
+   <definition name="empty-definition" 
+       template="/WEB-INF/views/tiles/layouts/emptyLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="" />  
+       <put-attribute name="menu" value="" /> 
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="" />  
+   </definition>  
+   
+   
+   
+   <definition name="login-layout-definition" extends="base-definition"
+       template="/WEB-INF/views/tiles/layouts/loginLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="" />  
+       <put-attribute name="menu" value="" />  
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="" />  
+   </definition>
+   
+  
+   
+   <definition name="base-layout-definition" extends="base-definition"  template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">  
+       <put-attribute name="title" value="" />  
+       <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />  
+       <put-attribute name="menu" value="/WEB-INF/views/tiles/template/defaultMenu.jsp" /> 
+       <put-attribute name="body" value="" />  
+       <put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />  
+        <put-attribute name="scriptPage" value="" />
+           <put-attribute name="menu_user" value="/WEB-INF/views/tiles/template/defaultMenuUser.jsp" /> 
+     
+   </definition>
+ 
+ <!-- Error Page -->
+  <definition name="404" extends="login-layout-definition">  
+       <put-attribute name="title" value="Đăng nhập" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/error/404.jsp" />  
+   </definition>
+   
+  <!-- Home Page -->
+   <definition name="loginPage" extends="login-layout-definition">  
+       <put-attribute name="title" value="Đăng nhập" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/login/login.jsp" />  
+   </definition>
+   
+    <definition name="forgotPassword" extends="login-layout-definition">  
+       <put-attribute name="title" value="Khôi phục mật khẩu" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/login/forgotPassword.jsp" />  
+   </definition>
+   
+   <definition name="home" extends="base-layout-definition">  
+       <put-attribute name="title" value="Welcome" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/home/index.jsp" />  
+   </definition> 
+   
+   <definition name="profile" extends="base-layout-definition">  
+       <put-attribute name="title" value="Thông tin cá nhân" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/home/profile.jsp" />  
+   </definition> 
+   
+    <definition name="changePassword" extends="base-layout-definition">  
+       <put-attribute name="title" value="Đổi mật khẩu" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/home/changePassword.jsp" />  
+   </definition> 
+   <definition name="reportCustomers" extends="base-layout-definition">  
+       <put-attribute name="title" value="Báo cáo khách hàng" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/report/report_customer.jsp" />  
+   </definition> 
+   
+   
+</tiles-definitions>
