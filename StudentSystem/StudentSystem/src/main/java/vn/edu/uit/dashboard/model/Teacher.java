@@ -1,7 +1,11 @@
 package vn.edu.uit.dashboard.model;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
+
 import javax.persistence.*;
+
+import java.util.Date;
 import java.util.List;
 
 
@@ -20,6 +24,16 @@ public class Teacher implements Serializable {
 	private String address;
 
 	private String name;
+	
+	private String phone;
+	
+	private String username;
+	
+	private String password;
+	
+	private String email;
+	
+	private byte status;
 
 	//bi-directional many-to-one association to Class
 	@OneToMany(mappedBy="teacher")
@@ -73,5 +87,98 @@ public class Teacher implements Serializable {
 
 		return clazz;
 	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public byte getStatus() {
+		return status;
+	}
+
+	public void setStatus(byte status) {
+		this.status = status;
+	}
+	
+	
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getStatusHtml(byte status) {
+		return status == 1 ? "<div class=\"tag tag-success\">Hoạt động</div>" : "<div class=\"tag tag-danger\">Đang khoá</div>";
+	}
+	
+	
+	public String getYearFormatVN(Date date) {
+		if (date == null) {
+			date = new Date();
+			return (new SimpleDateFormat("yyyy").format(date));
+		} else {
+			return (new SimpleDateFormat("yyyy").format(date));
+		}
+	}
+
+	public String getMonthYearFormatVN(Date date) {
+		if (date == null) {
+			date = new Date();
+			return (new SimpleDateFormat("MM/yyyy").format(date));
+		} else {
+			return (new SimpleDateFormat("MM/yyyy").format(date));
+		}
+	}
+
+	public String getDateHourFormatVN(Date date) {
+		if (date == null) {
+			date = new Date();
+			return (new SimpleDateFormat("dd/MM/yyyy HH:00").format(date));
+		} else {
+			return (new SimpleDateFormat("dd/MM/yyyy HH:00").format(date));
+		}
+	}
+
+	public String getDateFormatVN(Date date) {
+		if (date == null) {
+			date = new Date();
+			return (new SimpleDateFormat("dd/MM/yyyy").format(date));
+		} else {
+			return (new SimpleDateFormat("dd/MM/yyyy").format(date));
+		}
+	}
+
+	public String getDatetimeFormatVN(Date date) {
+		if (date == null) {
+			date = new Date();
+			return (new SimpleDateFormat("dd/MM/yyyy HH:mm").format(date));
+		} else {
+			return (new SimpleDateFormat("dd/MM/yyyy HH:mm").format(date));
+		}
+
+	}
+	
 
 }

@@ -75,9 +75,9 @@
        <put-attribute name="title" value="Đổi mật khẩu" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/home/changePassword.jsp" />  
    </definition> 
-   <definition name="reportCustomers" extends="base-layout-definition">  
-       <put-attribute name="title" value="Báo cáo khách hàng" />  
-       <put-attribute name="body" value="/WEB-INF/views/pages/report/report_customer.jsp" />  
+   <definition name="teachers" extends="base-layout-definition">  
+       <put-attribute name="title" value="Danh sách giáo viên" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/teacher/index.jsp" />  
    </definition> 
    
    
