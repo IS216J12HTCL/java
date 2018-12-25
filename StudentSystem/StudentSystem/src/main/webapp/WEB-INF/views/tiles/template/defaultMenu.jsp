@@ -7,18 +7,18 @@
 		<ul id="main-menu-navigation" data-menu="menu-navigation"
 			class="navigation navigation-main">
 			
-<li class="nav-item"><a href="<c:url value='/customers' />"><i
-					class="ft-users"></i><span data-i18n="" class="menu-title">Khách hàng</span></a></li>
-		<li class="nav-item"><a href="<c:url value='/orders' />"><i
-					class="ft-shopping-cart"></i><span data-i18n="" class="menu-title">Đơn hàng</span></a></li>
+<li class="nav-item"><a href="<c:url value='/teachers' />"><i
+					class="ft-users"></i><span data-i18n="" class="menu-title">Giáo viên</span></a></li>
+		<li class="nav-item"><a href="<c:url value='/students' />"><i
+					class="ft-shopping-cart"></i><span data-i18n="" class="menu-title">Học sinh</span></a></li>
 			
 			
-<li class="nav-item"><a href="<c:url value='' />"><i
-					class="ft-users"></i><span data-i18n="" class="menu-title">Nhân viên</span></a></li>
+<li class="nav-item"><a href="<c:url value='/class' />"><i
+					class="ft-users"></i><span data-i18n="" class="menu-title">Lớp</span></a></li>
 			
-<li class="nav-item"><a href="<c:url value='' />"><i
-					class="ft-calendar"></i><span data-i18n="" class="menu-title">Bảo hành</span></a></li>
-<li class="nav-item"><a href="<c:url value='' />"><i
+<li class="nav-item"><a href="<c:url value='/scores' />"><i
+					class="ft-calendar"></i><span data-i18n="" class="menu-title">Bảng điểm</span></a></li>
+<li class="nav-item"><a href="<c:url value='/decentralizations' />"><i
 					class="fa fa-newspaper-o"></i><span data-i18n="" class="menu-title">Phân quyền</span></a></li>
 
 					
@@ -29,13 +29,10 @@
 				<ul class="menu-content">
 					
 					<li><a href="<c:url value='/report_customers' />"
-						class="menu-item">Thống kê khách hàng</a></li>
+						class="menu-item">Thống kê điểm của học sinh</a></li>
 						<li><a href="<c:url value='' />"
-						class="menu-item">Thống kê Doanh thu</a></li>
-						<li><a href="<c:url value='' />"
-						class="menu-item">Thống kê chi phí</a></li>
-						<li><a href="<c:url value='' />"
-						class="menu-item">Thống kê đơn hàng</a></li>
+						class="menu-item">Thống kê xếp loại học sinh</a></li>
+						
 					
 				</ul></li>
 			

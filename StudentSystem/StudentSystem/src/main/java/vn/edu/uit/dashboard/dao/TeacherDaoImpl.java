@@ -63,11 +63,15 @@ public class TeacherDaoImpl extends AbstractDao<Integer, Teacher> implements Tea
 		Session session = sessionFactory.getCurrentSession();
 		session.delete(entity);
 	}
-
+	@SuppressWarnings("unchecked")
 	@Override
 	public List<Teacher> findAll() {
-
-		return null;
+		Criteria criteria = sessionFactory.getCurrentSession()
+				.createCriteria(Teacher.class)
+				.addOrder(Property.forName("id").desc());
+				
+		criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY) ;
+		return criteria.list();
 	}
 
 	
